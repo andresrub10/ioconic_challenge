@@ -1,1 +1,0 @@
-# ioconic_challenge
