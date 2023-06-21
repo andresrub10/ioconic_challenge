@@ -2,3 +2,8 @@ spring:
     data:
         mongodb:
             uri: mongodb://localhost:27017/ioconic_challenge
+        redis:
+            host: localhost
+            port: 6379
+            repositories: true
+
