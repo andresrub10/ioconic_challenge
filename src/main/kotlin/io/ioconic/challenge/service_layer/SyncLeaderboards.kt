@@ -17,15 +17,16 @@ class SyncLeaderboardsService(
 
     fun execute(score: Score) {
 
+        val limit = 10
         var monthlyLeaderboard = GetMonthlyLeaderboardService.execute().toMutableList()
         var allTimeLeaderboard = GetAllTimeLeaderboardService.execute().toMutableList()
 
-        if (isScoreFromThisMonth(score) && monthlyLeaderboard.size < 2) {
+        if (isScoreFromThisMonth(score) && monthlyLeaderboard.size < limit) {
             scoreRedisRepository.save(score)
             monthlyLeaderboard.add(score)
         }
 
-        if (allTimeLeaderboard.size < 2) {
+        if (allTimeLeaderboard.size < limit) {
             scoreRedisRepository.save(score)
             allTimeLeaderboard.add(score)
         }

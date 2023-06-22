@@ -12,7 +12,7 @@ import io.ioconic.challenge.data_layer.repository.redis.ScoreRedisRepository
 @Service
 class GetAllTimeLeaderboardService(private val scoreRedisRepository: ScoreRedisRepository) {
     fun execute(): List<Score>{
-        val limit = 2
+        val limit = 10
         return scoreRedisRepository.findAll().toList()
         .sortedByDescending { it.score }
         .take(limit)

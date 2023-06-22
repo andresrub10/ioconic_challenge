@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 @Service
 class GetMonthlyLeaderboardService(private val scoreRedisRepository: ScoreRedisRepository) {
     fun execute(): List<Score> {
-        val limit = 2
+        val limit = 10 
         return scoreRedisRepository
                 .findAll()
                 .toList()

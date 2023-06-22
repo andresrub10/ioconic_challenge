@@ -1,0 +1,30 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    container_name: mongo 
+    environment:
+      - discovery.type=single-node
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+  redis:
+    image: redis 
+    container_name: redis 
+    environment:
+      - discovery.type=single-node
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+  ioconic_challenge:
+    build:
+      dockerfile: ./Dockerfile
+    image: ioconic_challenge 
+    command: ./mvnw spring-boot:run
+    depends_on:
+      - mongo
+      - redis
+    ports:
+      - 8080:8080
