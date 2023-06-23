@@ -73,7 +73,7 @@ This will deploy one instance of the web applicaiton @ localhost port 8080 , one
 ## Usage 
 
 Once the application is deployed the <strong>Swagger</strong> documentation will be 
-available [here](localhost:8080/http://localhost:8080/swagger-ui/index.html).
+available [here](http://localhost:8080/swagger-ui/index.html).
 
 Also, 3 endpoints will be available. 
     
