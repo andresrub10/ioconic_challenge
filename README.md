@@ -22,7 +22,7 @@
 ## About The Project
 
 This is a coding exercise that serves one of the steps of the recruiting process 
-of the company <a href="www.ioconic.io">Ioconic</a> for a backend developer role.
+of the company <a href="http://www.ioconic.io">Ioconic</a> for a backend developer role.
 
 The idea was to build a small web server solution that serves as a leaderboard, where
 the users could:
