@@ -51,7 +51,7 @@ without sacrificing quality, readability, maintainability, scalability and avail
 
 The solution is contained within multiple docker containers. That are managed via 
 a docker-compose configuration. That makes <strong>docker</strong> and <strong>docker-compose</strong> 
-as prerequisites.
+the only prerequisites.
 
 After cloning this repo and CD into the root of the project:
 
