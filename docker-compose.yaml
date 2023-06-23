@@ -21,6 +21,7 @@ services:
   ioconic_challenge:
     build:
       dockerfile: ./Dockerfile
+      context: .
     image: ioconic_challenge 
     command: ./mvnw spring-boot:run
     depends_on:
